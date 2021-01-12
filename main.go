@@ -75,17 +75,17 @@ func Possible(y int, x int, n int) bool {
 	var i,j,x0,y0 int
 
 	for i = 0; i < 9; i++ {
+		// rows
 		if grid[y][i] == n {
 			return false
 		}
-
-	}
-	for i = 0; i < 9; i++ {
+		// cols
 		if grid[i][x] == n {
 			return false
 		}
-	}
 
+	}
+	// small squares
 	y0 = (y/3)*3
 	x0 = (x/3)*3
 	for i = 0; i < 3; i++ {
